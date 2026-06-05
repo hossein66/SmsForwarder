@@ -30,6 +30,7 @@ jobs:
           java-package: jdk
       # 获取打包秘钥
       - name: Checkout Android Keystore
+        if: ${{ secrets.TOKEN != '' }}
         uses: actions/checkout@v4
         with:
           repository: pppscn/keystore
